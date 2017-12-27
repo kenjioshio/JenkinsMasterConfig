@@ -6,12 +6,11 @@ def globalProps = instance.getGlobalNodeProperties()
 def props       = globalProps.getAll(hudson.slaves.EnvironmentVariablesNodeProperty.class)
 
 def environments = [
-                        "ChocoToolBase": "C:\ProgramData\chocolatey\bin",
-                        "CI_BASE": "C:\CI_BASE",
-                        "MSBUILD40": "C:\Windows\Microsoft.NET\\Framework\v4.0.30319\msbuild.exe",
-                        "NUnit264": "C:\Program Files (x86)\NUnit 2.6.4\bin",
-                        "NUnit264_32": "C:\Program Files\NUnit 2.6.4\bin"
-	               ]
+    "ChocoToolBase": "C:\\ProgramData\\chocolatey\\bin",
+    "CI_BASE": "C:\\CI_BASE",
+    "MSBUILD40": "C:\\Windows\\Microsoft.NET\\Framework\\v4.0.30319\\msbuild.exe",
+    "NUnit264_32": "C:\\Program Files\\NUnit 2.6.4\\bin"
+    ]
 
 environments.each {
   if (props.isEmpty()) {
